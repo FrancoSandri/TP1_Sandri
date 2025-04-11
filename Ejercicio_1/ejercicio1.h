@@ -1,5 +1,4 @@
-#ifndef EJERCICIO1_H
-#define EJERCICIO1_H
+#pragma once
 
 #include <iostream>
 #include <vector>
@@ -123,5 +122,3 @@ class CentralRegional:public EntidadOrganizativa{
         void agregarGerenteMedio(GerenteMedio* gerente);
 
 };
-
-#endif
