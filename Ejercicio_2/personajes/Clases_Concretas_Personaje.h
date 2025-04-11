@@ -4,12 +4,12 @@
 #include "Mago.h"
 class Hechicero : public Mago {
 public:
-    Hechicero() : Mago("Hechicero", 90, 100, 85, 70) {}
+    Hechicero() : Mago("Hechicero", 100, 100, 85, 70) {}
 };
 
 class Conjurador : public Mago {
 public:
-    Conjurador() : Mago("Conjurador", 95, 90, 75, 80) {}
+    Conjurador() : Mago("Conjurador", 100, 90, 75, 80) {}
 };
 
 class Brujo : public Mago {
@@ -19,7 +19,7 @@ public:
 
 class Nigromante : public Mago {
 public:
-    Nigromante() : Mago("Nigromante", 80, 110, 95, 65) {}
+    Nigromante() : Mago("Nigromante", 100, 110, 95, 65) {}
 };
 
 
@@ -28,17 +28,17 @@ public:
 
 class Barbaro : public Guerrero {
 public:
-    Barbaro() : Guerrero("Bárbaro", 120, 40, 5, 20) {}
+    Barbaro() : Guerrero("Bárbaro", 100, 40, 5, 20) {}
 };
 
 class Paladin : public Guerrero {
 public:
-    Paladin() : Guerrero("Paladín", 130, 30, 15, 15) {}
+    Paladin() : Guerrero("Paladín", 100, 30, 15, 15) {}
 };
 
 class Caballero : public Guerrero {
 public:
-    Caballero() : Guerrero("Caballero", 110, 25, 20, 18) {}
+    Caballero() : Guerrero("Caballero", 100, 25, 20, 18) {}
 };
 
 
@@ -49,6 +49,6 @@ public:
 
 class Gladiador : public Guerrero {
 public:
-    Gladiador() : Guerrero("Gladiador", 105, 28, 12, 22) {}
+    Gladiador() : Guerrero("Gladiador", 100, 28, 12, 22) {}
 };
 #endif
