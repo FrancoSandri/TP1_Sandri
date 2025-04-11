@@ -1,7 +1,7 @@
-// ================= armas/Baston.h =================
 #ifndef CLASES_CONCRETAS_H
 #define CLASES_CONCRETAS_H
 #include "ItemMagico.h"
+#pragma once
 
 class Baston : public ItemMagico {
 public:

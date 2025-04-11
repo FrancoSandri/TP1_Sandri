@@ -5,10 +5,6 @@
 #include <ctime>
 
 #include "ejercicio3.h"
-#include "../Ejercicio_2/armas/ItemMagico.cpp"
-#include "../Ejercicio_2/armas/ArmaCombate.cpp"
-#include "../Ejercicio_2/personajes/Mago.cpp"
-#include "../Ejercicio_2/personajes/Guerrero.cpp"
 #include "../Ejercicio_2/personajes/Clases_Concretas_Personaje.h"
 #include "../Ejercicio_2/armas/Clases_Concretas.h"
 

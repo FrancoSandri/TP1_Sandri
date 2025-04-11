@@ -1,6 +1,7 @@
 #ifndef ITEMMAGICO_H
 #define ITEMMAGICO_H
 #include "IArma.h"
+#pragma once
 
 using namespace std;
 

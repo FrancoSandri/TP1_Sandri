@@ -1,6 +1,7 @@
 #ifndef MAGO_H
 #define MAGO_H
 #include "IPersonaje.h"
+#pragma once
 
 class Mago : public IPersonaje {
 protected:

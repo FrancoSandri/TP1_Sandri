@@ -1,6 +1,6 @@
 #ifndef CLASES_CONCRETAS_PERSONAJE_H
 #define CLASES_CONCRETAS_PERSONAJE_H
-
+#pragma once
 #include "Mago.h"
 class Hechicero : public Mago {
 public:

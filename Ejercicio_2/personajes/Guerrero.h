@@ -1,6 +1,7 @@
 #ifndef GUERRERO_H
 #define GUERRERO_H
 #include "IPersonaje.h"
+#pragma once
 
 class Guerrero : public IPersonaje {
 protected:

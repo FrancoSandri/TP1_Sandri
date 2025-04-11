@@ -1,6 +1,7 @@
 #ifndef IARMA_H
 #define IARMA_H
 #include <string>
+#pragma once
 
 using namespace std;
 

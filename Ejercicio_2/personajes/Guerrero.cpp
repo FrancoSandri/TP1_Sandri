@@ -4,10 +4,7 @@
 Guerrero::Guerrero(string n, int h, int f, int d, int v) : nombre(n), hp(h), fuerza(f), defensa(d), velocidad(v), arma(nullptr) {}
 string Guerrero::getNombre() const { return nombre; }
 int Guerrero::getHP() const { return hp; }
-void Guerrero::recibirDanio(int d) {
-    int real = d - defensa;
-    hp -= (real > 0 ? real : 1);
-}
+void Guerrero::recibirDanio(int d) { hp -= d; }
 void Guerrero::mostrarEstado() const {
     cout << nombre << " [HP: " << hp << ", Fuerza: " << fuerza << "]\n";
 }

@@ -1,5 +1,6 @@
 #ifndef EJERCICIO_4_H
 #define EJERCICIO_4_H
+#pragma once
 
 #include "../Ejercicio_2/personajes/IPersonaje.h"
 #include <iostream>

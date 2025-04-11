@@ -2,6 +2,7 @@
 #define IPERSONAJE_H
 #include <string>
 #include "../armas/IArma.h"
+#pragma once
 
 using namespace std;
 
