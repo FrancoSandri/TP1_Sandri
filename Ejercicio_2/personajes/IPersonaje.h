@@ -1,5 +1,3 @@
-#ifndef IPERSONAJE_H
-#define IPERSONAJE_H
 #include <string>
 #include "../armas/IArma.h"
 #pragma once
@@ -16,4 +14,3 @@ public:
     virtual void setArma(IArma*) = 0;
     virtual ~IPersonaje() = default;
 };
-#endif

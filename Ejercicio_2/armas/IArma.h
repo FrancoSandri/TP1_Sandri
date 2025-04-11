@@ -1,8 +1,6 @@
-#ifndef IARMA_H
-#define IARMA_H
-#include <string>
 #pragma once
 
+#include <string>
 using namespace std;
 
 class IArma {
@@ -14,4 +12,3 @@ public:
     virtual void usar() = 0;
     virtual ~IArma() = default;
 };
-#endif

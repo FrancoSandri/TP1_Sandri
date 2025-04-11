@@ -1,5 +1,3 @@
-#ifndef ARMACOMBATE_H
-#define ARMACOMBATE_H
 #include "IArma.h"
 #pragma once
 
@@ -18,4 +16,3 @@ public:
     string getTipo() const override;
     void usar() override;
 };
-#endif

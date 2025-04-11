@@ -1,5 +1,3 @@
-#ifndef CLASES_CONCRETAS_PERSONAJE_H
-#define CLASES_CONCRETAS_PERSONAJE_H
 #pragma once
 #include "Mago.h"
 class Hechicero : public Mago {
@@ -51,4 +49,3 @@ class Gladiador : public Guerrero {
 public:
     Gladiador() : Guerrero("Gladiador", 100, 28, 12, 22) {}
 };
-#endif

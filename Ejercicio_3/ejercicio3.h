@@ -1,5 +1,3 @@
-#ifndef EJERCICIO3_H
-#define EJERCICIO3_H
 #pragma once
 #include <memory>
 #include "../Ejercicio_2/personajes/IPersonaje.h"
@@ -11,4 +9,3 @@ public:
     static unique_ptr<IPersonaje> crearGuerreroRandom();
     static IArma* crearArmaRandom();
 };
-#endif

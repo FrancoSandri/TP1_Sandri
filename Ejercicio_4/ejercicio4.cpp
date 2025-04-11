@@ -36,11 +36,11 @@ void mostrarMenu(IPersonaje& j1, IArma* a1, IPersonaje& j2, IArma* a2) {
         cout << j2.getNombre() << " ataca con " << a2->getNombre() << " y elige opción " << static_cast<int>(m2) << endl;
 
         if (resultado == 1) {
-            j2.recibirDanio(10);
-            cout << j1.getNombre() << " gana la ronda y hace 10 puntos de daño." << endl;
+            j2.recibirDanio(a1->getDanio());
+            cout << j1.getNombre() << " gana la ronda y hace " << a1->getDanio() << " puntos de daño." << endl;
         } else if (resultado == 2) {
-            j1.recibirDanio(10);
-            cout << j2.getNombre() << " gana la ronda y hace 10 puntos de daño." << endl;
+            j1.recibirDanio(a2->getDanio());
+            cout << j2.getNombre() << " gana la ronda y hace " << a2->getDanio() << " puntos de daño." << endl;
         } else {
             cout << "Empate. Nadie recibe daño." << endl;
         }

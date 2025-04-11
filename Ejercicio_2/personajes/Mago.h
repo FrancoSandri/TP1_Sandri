@@ -1,5 +1,3 @@
-#ifndef MAGO_H
-#define MAGO_H
 #include "IPersonaje.h"
 #pragma once
 
@@ -17,4 +15,3 @@ public:
     void atacar(IPersonaje& o) override;
     void setArma(IArma* a) override;
 };
-#endif
