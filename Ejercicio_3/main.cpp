@@ -32,7 +32,7 @@ int main() {
         armas.emplace_back(arma);
     }
 
-    cout << "=== Personajes generados aleatoriamente === "<< endl ;
+    cout << "Personajes generados aleatoriamente."<< endl ;
     for (auto& p : personajes) {
         p->mostrarEstado();
     }

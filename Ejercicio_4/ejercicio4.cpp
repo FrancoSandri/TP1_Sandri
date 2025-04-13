@@ -46,7 +46,7 @@ void mostrarMenu(IPersonaje& j1, IArma* a1, IPersonaje& j2, IArma* a2) {
         }
     }
 
-    cout << "\n*** Fin de la batalla ***\n";
+    cout << "\nFin de la batalla!\n";
     if (j1.getHP() <= 0) cout << j1.getNombre() << " ha sido derrotado." << endl;
     if (j2.getHP() <= 0) cout << j2.getNombre() << " ha sido derrotado." << endl;
 }
