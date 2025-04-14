@@ -1,4 +1,4 @@
-#include "./headers/armas/Garrote.h"
+#include "../headers/armas/Garrote.h"
 #include <random>
 
 Garrote::Garrote() : ArmaCombate("Garrote", "Contundente", "Roble", 15, 70, 4.5f) {

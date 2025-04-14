@@ -3,6 +3,7 @@
         "xstring": "cpp",
         "vector": "cpp",
         "xutility": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "random": "cpp"
     }
 }

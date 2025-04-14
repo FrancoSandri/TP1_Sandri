@@ -1,4 +1,4 @@
-#include "./headers/armas/HachaDoble.h"
+#include "../headers/armas/HachaDoble.h"
 #include <random>
 
 HachaDoble::HachaDoble() : ArmaCombate("Hacha Doble", "Corte", "Acero", 20, 40, 5.0f) {
