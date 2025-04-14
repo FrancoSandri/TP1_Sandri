@@ -1,5 +1,5 @@
-#include <string>
 #include "../armas/IArma.h"
+#include <string>
 #pragma once
 
 using namespace std;

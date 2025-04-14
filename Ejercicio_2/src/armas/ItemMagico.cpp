@@ -1,4 +1,4 @@
-#include "ItemMagico.h"
+#include "../headers/armas/ItemMagico.h"
 #include <iostream>
 
 ItemMagico::ItemMagico(std::string n, std::string e, std::string desc, int p, int m, float w)

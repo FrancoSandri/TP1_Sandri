@@ -1,5 +1,5 @@
-#include "IPersonaje.h"
 #pragma once
+#include "IPersonaje.h"
 
 class Mago : public IPersonaje {
 protected:

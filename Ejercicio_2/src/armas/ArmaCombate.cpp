@@ -1,4 +1,4 @@
-#include "ArmaCombate.h"
+#include "../headers/armas/ArmaCombate.h"
 #include <iostream>
 
 using namespace std;

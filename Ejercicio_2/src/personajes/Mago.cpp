@@ -1,4 +1,4 @@
-#include "Mago.h"
+#include "../headers/personajes/Mago.h"
 #include <iostream>
 
 Mago::Mago(string n, int h, int m, int i, int s) : nombre(n), hp(h), mana(m), inteligencia(i), sabiduria(s), arma(nullptr) {}

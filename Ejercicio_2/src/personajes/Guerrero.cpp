@@ -1,4 +1,4 @@
-#include "Guerrero.h"
+#include "../headers/personajes/Guerrero.h"
 #include <iostream>
 
 Guerrero::Guerrero(string n, int h, int f, int d, int v) : nombre(n), hp(h), fuerza(f), defensa(d), velocidad(v), arma(nullptr) {}
