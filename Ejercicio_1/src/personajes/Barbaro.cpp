@@ -5,9 +5,9 @@ Barbaro::Barbaro() : Guerrero("Bárbaro", 100, 40, 5, 20) {
     mt19937 gen(rd());
     uniform_int_distribution<> distrib(0, 1);
     furiaSalvaje = distrib(gen);
+    hp = furiaSalvaje ? hp + 10 : hp - 10;
 }
 
 int Barbaro::getHP() const {
-    int hpBase = Guerrero::getHP();
-    return furiaSalvaje ? hpBase + 10 : hpBase - 10;
+    return hp;
 }

@@ -2,10 +2,13 @@
 #include <memory>
 #include <cstdlib>
 #include <ctime>
-#include "../Ejercicio_3/ejercicio3.h"
-#include "ejercicio4.h"
-#include "../Ejercicio_2/armas/Clases_Concretas.h"
-#include "../Ejercicio_2/personajes/Clases_Concretas_Personaje.h"
+#include "../Ejercicio_2/ejercicio2.h"
+#include "ejercicio3.h"
+
+#include "../Ejercicio_1/headers/personajes/IPersonaje.h"
+#include "../Ejercicio_1/headers/armas/IArma.h"
+
+
 
 int resolverCombate(Movimiento p1, Movimiento p2) {
     if (p1 == p2) return 0;
@@ -37,7 +40,7 @@ void mostrarMenu(IPersonaje& j1, IArma* a1, IPersonaje& j2, IArma* a2) {
 
         if (resultado == 1) {
             j2.recibirDanio(a1->getDanio());
-            cout << j1.getNombre() << " gana la ronda y hace " << a1->getDanio() << " puntos de daño." << endl;
+            cout << j1.getNombre() << " gana la ronda y hace " << a1->getDanio() << " puntos de daño. " << endl;
         } else if (resultado == 2) {
             j1.recibirDanio(a2->getDanio());
             cout << j2.getNombre() << " gana la ronda y hace " << a2->getDanio() << " puntos de daño." << endl;

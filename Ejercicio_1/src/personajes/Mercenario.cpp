@@ -5,9 +5,9 @@ Mercenario::Mercenario() : Guerrero("Mercenario", 100, 35, 10, 25) {
     mt19937 gen(rd());
     uniform_int_distribution<> distrib(0, 1);
     instintoSupervivencia = distrib(gen);
+    hp = instintoSupervivencia ? hp + 10 : hp - 10;
 }
 
 int Mercenario::getHP() const {
-    int hpBase = Guerrero::getHP();
-    return instintoSupervivencia ? hpBase + 10 : hpBase - 10;
+    return hp;
 }

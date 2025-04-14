@@ -5,9 +5,9 @@ Paladin::Paladin() : Guerrero("Paladín", 100, 30, 15, 15) {
     mt19937 gen(rd());
     uniform_int_distribution<> distrib(0, 1);
     bendicionDivina = distrib(gen);
+    hp = bendicionDivina ? hp + 10 : hp - 10;
 }
 
 int Paladin::getHP() const {
-    int hpBase = Guerrero::getHP();
-    return bendicionDivina ? hpBase + 10 : hpBase - 10;
+    return hp;
 }

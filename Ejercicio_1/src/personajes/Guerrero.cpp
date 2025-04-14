@@ -20,9 +20,7 @@ int Guerrero::getHP() const {
 }
 
 void Guerrero::recibirDanio(int d) {
-    // Aplicar defensa para reducir el daño
-    int danioEfectivo = std::max(0, d - defensa);
-    hp = std::max(0, hp - danioEfectivo);
+    hp-= d;
 }
 
 void Guerrero::mostrarEstado() const {

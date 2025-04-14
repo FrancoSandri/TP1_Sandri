@@ -5,9 +5,9 @@ Caballero::Caballero() : Guerrero("Caballero", 100, 25, 20, 18) {
     mt19937 gen(rd());
     uniform_int_distribution<> distrib(0, 1);
     honorInquebrantable = distrib(gen);
+    hp = honorInquebrantable ? hp + 10 : hp - 10;
 }
 
 int Caballero::getHP() const {
-    int hpBase = Guerrero::getHP();
-    return honorInquebrantable ? hpBase + 10 : hpBase - 10;
+    return hp;
 }

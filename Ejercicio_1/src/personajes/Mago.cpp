@@ -21,9 +21,7 @@ int Mago::getHP() const {
 
 void Mago::recibirDanio(int d) {
     // Usar sabiduría para reducir el daño (similar a defensa en Guerrero)
-    int reduccion = sabiduria / 5; // Ejemplo: sabiduría=70 -> reduce 14
-    int danioEfectivo = std::max(0, d - reduccion);
-    hp = std::max(0, hp - danioEfectivo);
+    hp -= d;
 }
 
 void Mago::mostrarEstado() const {

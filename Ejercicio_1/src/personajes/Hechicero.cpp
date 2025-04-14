@@ -5,9 +5,9 @@ Hechicero::Hechicero() : Mago("Hechicero", 100, 100, 85, 70) {
     mt19937 gen(rd());
     uniform_int_distribution<> distrib(0, 1);
     auraMistica = distrib(gen);
+    hp = auraMistica ? hp + 10 : hp - 10;
 }
 
 int Hechicero::getHP() const {
-    int hpBase = Mago::getHP();
-    return auraMistica ? hpBase + 10 : hpBase - 10;
+    return hp;
 }

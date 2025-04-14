@@ -5,9 +5,9 @@ Nigromante::Nigromante() : Mago("Nigromante", 100, 110, 95, 65) {
     mt19937 gen(rd());
     uniform_int_distribution<> distrib(0, 1);
     esenciaNecrotica = distrib(gen);
+    hp = esenciaNecrotica ? hp + 10 : hp - 10;
 }
 
 int Nigromante::getHP() const {
-    int hpBase = Mago::getHP();
-    return esenciaNecrotica ? hpBase + 10 : hpBase - 10;
+    return hp;
 }
