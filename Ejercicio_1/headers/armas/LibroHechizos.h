@@ -9,5 +9,4 @@ private:
     bool esAntiguo;
 public:
     LibroHechizos();
-    int getDanio() const override;
 };

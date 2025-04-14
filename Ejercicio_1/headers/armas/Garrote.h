@@ -9,5 +9,4 @@ private:
     bool ataquePesado;
 public:
     Garrote();
-    int getDanio() const override;
 };

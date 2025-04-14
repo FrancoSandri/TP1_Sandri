@@ -9,5 +9,4 @@ private:
     bool tienePinchos;
 public:
     Baston();
-    int getDanio() const override;
 };

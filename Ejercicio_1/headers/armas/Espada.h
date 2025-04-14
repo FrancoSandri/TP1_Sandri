@@ -9,5 +9,4 @@ private:
     bool estaAfilada;
 public:
     Espada();
-    int getDanio() const override;
 };

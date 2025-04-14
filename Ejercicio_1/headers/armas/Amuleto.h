@@ -9,5 +9,4 @@ private:
     bool esMaldito;
 public:
     Amuleto();
-    int getDanio() const override;
 };

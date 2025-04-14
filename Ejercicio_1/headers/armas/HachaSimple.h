@@ -9,5 +9,4 @@ private:
     bool esDeMadera;
 public:
     HachaSimple();
-    int getDanio() const override;
 };

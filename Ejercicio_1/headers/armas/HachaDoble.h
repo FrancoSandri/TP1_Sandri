@@ -9,5 +9,4 @@ private:
     bool GiroRapido;
 public:
     HachaDoble();
-    int getDanio() const override;
 };

@@ -9,5 +9,4 @@ private:
     bool largoAlcance;
 public:
     Lanza();
-    int getDanio() const override;
 };

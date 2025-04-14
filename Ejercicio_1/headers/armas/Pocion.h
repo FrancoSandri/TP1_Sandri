@@ -6,5 +6,4 @@ class Pocion : public ItemMagico {
         bool esCurativa;
     public:
         Pocion();
-        int getDanio() const override;
     };
