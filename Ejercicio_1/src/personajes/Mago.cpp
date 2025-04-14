@@ -2,16 +2,18 @@
 #include <iostream>
 #include <algorithm> // Para std::max y std::min
 
-Mago::Mago(std::string n, int h, int m, int i, int s)
-    : nombre(n), hp(std::max(0, h)), mana(std::max(0, m)), 
-      inteligencia(std::max(0, i)), sabiduria(std::max(0, s)), arma(nullptr) {
+using namespace std;
+
+Mago::Mago(string n, int h, int m, int i, int s)
+    : nombre(n), hp(std::max(0, h)), mana(max(0, m)), 
+      inteligencia(std::max(0, i)), sabiduria(max(0, s)), arma(nullptr) {
     // Validar que el nombre no esté vacío
     if (nombre.empty()) {
         nombre = "Mago sin nombre";
     }
 }
 
-std::string Mago::getNombre() const {
+string Mago::getNombre() const {
     return nombre;
 }
 
@@ -25,23 +27,23 @@ void Mago::recibirDanio(int d) {
 }
 
 void Mago::mostrarEstado() const {
-    std::cout << nombre << " [HP: " << getHP()
+    cout << nombre << " [HP: " << getHP()
               << ", Mana: " << mana 
               << ", Inteligencia: " << inteligencia 
               << ", Sabiduría: " << sabiduria;
     if (arma) {
-        std::cout << ", Arma: " << arma->getNombre() 
+        cout << ", Arma: " << arma->getNombre() 
                   << " (Daño: " << arma->getDanio() << ")";
     } else {
-        std::cout << ", Sin arma";
+        cout << ", Sin arma";
     }
-    std::cout << "]" << std::endl;
+    cout << "]" << endl;
 }
 
 void Mago::atacar(IPersonaje& objetivo) {
     if (!arma) {
-        std::cout << nombre << " no tiene arma para atacar a " 
-                  << objetivo.getNombre() << "." << std::endl;
+        cout << nombre << " no tiene arma para atacar a " 
+                  << objetivo.getNombre() << "." << endl;
         return;
     }
 
@@ -51,22 +53,22 @@ void Mago::atacar(IPersonaje& objetivo) {
     costoMana = std::max(1, costoMana - (sabiduria / 35));
 
     if (mana < costoMana) {
-        std::cout << nombre << " no tiene suficiente maná para atacar a " 
-                  << objetivo.getNombre() << "." << std::endl;
+        cout << nombre << " no tiene suficiente maná para atacar a " 
+                  << objetivo.getNombre() << "." << endl;
         return;
     }
 
     // Calcular daño: daño del arma + un factor basado en inteligencia
     int danioBase = arma->getDanio();
     int danioExtra = inteligencia / 4; // Escalar inteligencia para balance
-    int danioTotal = std::max(0, danioBase + danioExtra);
+    int danioTotal = max(0, danioBase + danioExtra);
 
     // Aplicar ataque
     mana -= costoMana;
-    std::cout << nombre << " lanza un hechizo a " << objetivo.getNombre() 
+    cout << nombre << " lanza un hechizo a " << objetivo.getNombre() 
               << " con " << arma->getNombre() 
               << " causando " << danioTotal << " de daño (usó " 
-              << costoMana << " maná)." << std::endl;
+              << costoMana << " maná)." << endl;
     arma->usar(); // Ejecutar efecto del arma
     objetivo.recibirDanio(danioTotal);
 }

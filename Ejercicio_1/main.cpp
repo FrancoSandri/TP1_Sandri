@@ -32,36 +32,36 @@ using namespace std;
 
 int main() {
     // Vector para almacenar personajes
-    vector<std::unique_ptr<IPersonaje>> personajes;
+    vector<unique_ptr<IPersonaje>> personajes;
 
     // Crear magos
-    personajes.emplace_back(std::make_unique<Hechicero>());
-    personajes.emplace_back(std::make_unique<Conjurador>());
-    personajes.emplace_back(std::make_unique<Brujo>());
-    personajes.emplace_back(std::make_unique<Nigromante>());
+    personajes.emplace_back(make_unique<Hechicero>());
+    personajes.emplace_back(make_unique<Conjurador>());
+    personajes.emplace_back(make_unique<Brujo>());
+    personajes.emplace_back(make_unique<Nigromante>());
 
     // Crear guerreros
-    personajes.emplace_back(std::make_unique<Barbaro>());
-    personajes.emplace_back(std::make_unique<Paladin>());
-    personajes.emplace_back(std::make_unique<Caballero>());
-    personajes.emplace_back(std::make_unique<Mercenario>());
-    personajes.emplace_back(std::make_unique<Gladiador>());
+    personajes.emplace_back(make_unique<Barbaro>());
+    personajes.emplace_back(make_unique<Paladin>());
+    personajes.emplace_back(make_unique<Caballero>());
+    personajes.emplace_back(make_unique<Mercenario>());
+    personajes.emplace_back(make_unique<Gladiador>());
 
     // Vector para almacenar armas
-    vector<std::unique_ptr<IArma>> armas;
+    vector<unique_ptr<IArma>> armas;
 
     // Armas mágicas
-    armas.emplace_back(std::make_unique<Baston>());
-    armas.emplace_back(std::make_unique<LibroHechizos>());
-    armas.emplace_back(std::make_unique<Pocion>());
-    armas.emplace_back(std::make_unique<Amuleto>());
+    armas.emplace_back(make_unique<Baston>());
+    armas.emplace_back(make_unique<LibroHechizos>());
+    armas.emplace_back(make_unique<Pocion>());
+    armas.emplace_back(make_unique<Amuleto>());
 
     // Armas físicas
-    armas.emplace_back(std::make_unique<HachaSimple>());
-    armas.emplace_back(std::make_unique<HachaDoble>());
-    armas.emplace_back(std::make_unique<Espada>());
-    armas.emplace_back(std::make_unique<Lanza>());
-    armas.emplace_back(std::make_unique<Garrote>());
+    armas.emplace_back(make_unique<HachaSimple>());
+    armas.emplace_back(make_unique<HachaDoble>());
+    armas.emplace_back(make_unique<Espada>());
+    armas.emplace_back(make_unique<Lanza>());
+    armas.emplace_back(make_unique<Garrote>());
 
     // Asignar armas a personajes de forma secuencial
     for (size_t i = 0; i < personajes.size(); ++i) {

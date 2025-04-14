@@ -2,9 +2,11 @@
 #include <iostream>
 #include <algorithm> // Para std::max y std::min
 
-Guerrero::Guerrero(std::string n, int h, int f, int d, int v)
-    : nombre(n), hp(std::max(0, h)), fuerza(std::max(0, f)), defensa(std::max(0, d)), 
-      velocidad(std::max(0, v)), arma(nullptr) {
+using namespace std;
+
+Guerrero::Guerrero(string n, int h, int f, int d, int v)
+    : nombre(n), hp(std::max(0, h)), fuerza(max(0, f)), defensa(max(0, d)), 
+      velocidad(max(0, v)), arma(nullptr) {
     // Validar que el nombre no esté vacío
     if (nombre.empty()) {
         nombre = "Guerrero sin nombre";
@@ -24,23 +26,23 @@ void Guerrero::recibirDanio(int d) {
 }
 
 void Guerrero::mostrarEstado() const {
-    std::cout << nombre << " [HP: " << getHP() 
+    cout << nombre << " [HP: " << getHP() 
               << ", Fuerza: " << fuerza 
               << ", Defensa: " << defensa 
               << ", Velocidad: " << velocidad;
     if (arma) {
-        std::cout << ", Arma: " << arma->getNombre() 
+        cout << ", Arma: " << arma->getNombre() 
                   << " (Daño: " << arma->getDanio() << ")";
     } else {
-        std::cout << ", Sin arma";
+        cout << ", Sin arma";
     }
-    std::cout << "]" << std::endl;
+    cout << "]" << endl;
 }
 
 void Guerrero::atacar(IPersonaje& objetivo) {
     if (!arma) {
-        std::cout << nombre << " no tiene arma para atacar a " 
-                  << objetivo.getNombre() << "." << std::endl;
+        cout << nombre << " no tiene arma para atacar a " 
+                  << objetivo.getNombre() << "." << endl;
         return;
     }
 
@@ -52,14 +54,14 @@ void Guerrero::atacar(IPersonaje& objetivo) {
     // Simular probabilidad de acierto basada en velocidad (opcional)
     bool acierto = true; // Simplificado; podríamos usar velocidad aquí
     if (acierto) {
-        std::cout << nombre << " ataca a " << objetivo.getNombre() 
+        cout << nombre << " ataca a " << objetivo.getNombre() 
                   << " con " << arma->getNombre() 
-                  << " causando " << danioTotal << " de daño." << std::endl;
+                  << " causando " << danioTotal << " de daño." << endl;
         arma->usar(); // Ejecutar efecto del arma
         objetivo.recibirDanio(danioTotal);
     } else {
-        std::cout << nombre << " falla el ataque contra " 
-                  << objetivo.getNombre() << "." << std::endl;
+        cout << nombre << " falla el ataque contra " 
+                  << objetivo.getNombre() << "." << endl;
     }
 }
 
