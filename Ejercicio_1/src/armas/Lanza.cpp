@@ -2,9 +2,7 @@
 #include <random>
 
 Lanza::Lanza() : ArmaCombate("Lanza", "Perforante", "Madera", 17, 55, 4.0f) {
-    // Generar largoAlcance aleatoriamente
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<> distrib(0, 1);
-    largoAlcance = distrib(gen);
+    int tipo = rand() % 2;
+    largoAlcance = tipo;
+    filo = largoAlcance ? filo + 5 : filo - 5;
 }
